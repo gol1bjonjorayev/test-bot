@@ -3,6 +3,7 @@ package gol1bjon.developer.service;
 import gol1bjon.developer.db.DataBase;
 import gol1bjon.developer.entity.Candidate;
 import gol1bjon.developer.files.WorkWithFiles;
+//import gol1bjon.developer.files.WorkWithFiles;
 
 import java.util.UUID;
 
@@ -20,8 +21,8 @@ public class CandidateService {
                 reqCandidate.getFullName(),
                 reqCandidate.getAge(),
                 reqCandidate.getDescription());
-        WorkWithFiles.writeCandidateList();
         DataBase.candidateList.add(candidate);
+        WorkWithFiles.writeCandidateList();
         return candidate;
     }
 }

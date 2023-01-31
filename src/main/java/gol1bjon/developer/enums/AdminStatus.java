@@ -4,5 +4,6 @@ public enum AdminStatus {
     SEND_PHOTO,
     ENTER_FULL_NAME,
     ENTER_AGE,
-    ENTER_DESCRIPTION
+    ENTER_DESCRIPTION,
+    CONFIRM_OR_CANCEL
 }

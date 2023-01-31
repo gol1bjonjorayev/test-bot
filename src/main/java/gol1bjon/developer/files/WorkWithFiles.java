@@ -26,12 +26,14 @@ public interface WorkWithFiles {
             List customers = GSON.fromJson(new BufferedReader(new FileReader(CUSTOMER_FILE)),
                     new TypeToken<List<Customer>>() {
                     }.getType());
+
             DataBase.customerList.clear();
             DataBase.customerList.addAll(customers);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
     }
+
 
     static void writeCustomerList(){
         try (PrintWriter writer = new PrintWriter(CUSTOMER_FILE)) {
@@ -42,8 +44,8 @@ public interface WorkWithFiles {
     }
 
     static void writeCandidateList() {
-        try (PrintWriter writer = new PrintWriter(CUSTOMER_FILE)) {
-            writer.write(GSON.toJson(DataBase.customerList));
+        try (PrintWriter writer = new PrintWriter(CANDIDATE_FILE)) {
+            writer.write(GSON.toJson(DataBase.candidateList));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
@@ -58,6 +60,7 @@ public interface WorkWithFiles {
                     }.getType());
             DataBase.candidateList.clear();
             DataBase.candidateList.addAll(candidate);
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

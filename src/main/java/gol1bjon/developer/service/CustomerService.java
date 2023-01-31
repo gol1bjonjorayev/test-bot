@@ -2,7 +2,7 @@ package gol1bjon.developer.service;
 
 import gol1bjon.developer.db.DataBase;
 import gol1bjon.developer.entity.Customer;
-import gol1bjon.developer.files.WorkWithFiles;
+//import gol1bjon.developer.files.WorkWithFiles;
 import org.telegram.telegrambots.meta.api.objects.Contact;
 
 import java.util.Random;
@@ -31,7 +31,7 @@ public class CustomerService {
         Customer customer = new Customer(chatId, contact.getFirstName(),
                 contact.getLastName(), contact.getPhoneNumber(),code);
         DataBase.customerList.add(customer);
-        WorkWithFiles.writeCustomerList();
+//        WorkWithFiles.writeCustomerList();
         return customer;
     }
 }

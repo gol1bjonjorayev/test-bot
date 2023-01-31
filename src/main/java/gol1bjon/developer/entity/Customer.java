@@ -16,6 +16,7 @@ public class Customer {
     private String hasVoted;
     private String confirmPassword;
 
+
     public Customer(String chatId, String firstName, String lastName, String phoneNumber, String confirmPassword) {
         this.chatId = chatId;
         this.firstName = firstName;
