@@ -167,9 +167,10 @@ public class AdminController {
 
         for (Customer customer : DataBase.customerList) {
             for (Candidate candidate : DataBase.candidateList) {
-
+                new MyThread(customer,candidate).start();
             }
         }
+
     }
 
     private static void sendMessageToCustomers(String message) {
